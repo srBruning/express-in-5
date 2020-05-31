@@ -3,7 +3,7 @@ const express = require('express');
 const server = express();
 
 server.get("/json", (req, res) =>{
-	res.json({message: "hello world"});
+	res.json({message: "hello world", view_more: "https://github.com/srBruning/express-in-5"});
 });
 
 server.get("/", (req, res) =>{
