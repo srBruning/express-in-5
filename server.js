@@ -10,6 +10,9 @@ server.get("/", (req, res) =>{
 	res.sendFile(__dirname + '/index.html');
 });
 
+//servindo arquivos staticos  da pasta public
+server.use(express.static('public'));
+
 const port = 4000;
 
 server.listen(port, () =>{

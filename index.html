@@ -11,8 +11,30 @@
         Express: HELLO WORLD
      </p>
      <br/>
+     <div id="qrcode"></div>
+
+
      <br/>
      <a href="https://github.com/srBruning/express-in-5">github.com/srBruning/express-in-5</a>
-
+     <script src="easy.qrcode.min.js?v=10" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+      // Options
+      var options = {
+        text: "https://github.com/srBruning/express-in-5",
+        width: 256,
+        height: 256,
+        colorDark : "#000000",
+        colorLight : "#ffffff",
+        correctLevel : QRCode.CorrectLevel.H, // L, M, Q, H
+        logo: '/logo.png',logoBackgroundTransparent:true,
+        //backgroundImage: '/bk.jpeg',
+        PO: '#e1622f', // Global Posotion Outer color. if not set, the defaut is `colorDark`
+        PI: '#aa5b71', // Global Posotion Inner color. if not set, the defaut is `colorDark`
+    
+      };
+      
+      // Create QRCode Object
+      new QRCode(document.getElementById("qrcode"), options);
+    </script>
  </body>
 </html>
